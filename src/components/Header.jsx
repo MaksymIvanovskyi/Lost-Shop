@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import logo from '../assets/logo.png';
+import './Header.css';
 
 export default function Header({ cartCount, likedCount, scrolled }) {
   return (
@@ -28,7 +30,9 @@ export default function Header({ cartCount, likedCount, scrolled }) {
           <a href="#stores" className="nav-link">Stores</a>
         </div>
         <div className="nav-logo">
-          <Link to="/" className="logo-text">LOST</Link>
+          <Link to="/">
+            <img src={logo} alt="LOST logo" className="logo-image" />
+          </Link>
         </div>
         <div className="nav-right">
           <button className="icon-btn" type="button" title="Вподобання">

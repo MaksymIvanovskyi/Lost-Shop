@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './Cart.css';
 
 export default function Cart({ cart, onRemoveFromCart }) {
   const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
@@ -6,13 +7,12 @@ export default function Cart({ cart, onRemoveFromCart }) {
   return (
     <section className="cart-page">
       <div className="cart-heading">
-        <p className="hero-label">YOUR CART</p>
         <h1 className="hero-title">Кошик</h1>
       </div>
       {cart.length === 0 ? (
         <div className="cart-empty">
           <p>Ваш кошик порожній.</p>
-          <Link to="/shop" className="hero-btn">Перейти до магазину</Link>
+          <Link to="/shop" className="cart-btn"style={{ textDecoration: 'none' }}>Перейти до магазину</Link>
         </div>
       ) : (
         <div className="cart-items">

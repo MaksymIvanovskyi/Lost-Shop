@@ -1,3 +1,5 @@
+import './Footer.css';
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -31,9 +33,7 @@ export default function Footer() {
             <h4>STAY CONNECTED</h4>
             <p className="footer-friend">BE OUR FRIEND</p>
             <div className="social-icons">
-              <a href="#" className="social-icon">Instagram</a>
-              <a href="#" className="social-icon">Facebook</a>
-              <a href="#" className="social-icon">Twitter</a>
+              
             </div>
           </div>
         </div>

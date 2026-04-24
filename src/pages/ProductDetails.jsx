@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getProductById } from '../utils/products.js';
+import './ProductDetails.css';
 
 export default function ProductDetails({ onToggleLike, onAddToCart, liked }) {
   const { id } = useParams();

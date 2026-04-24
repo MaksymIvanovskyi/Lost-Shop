@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import ProductCard from '../components/ProductCard.jsx';
 import { products, maxStorePrice } from '../utils/products.js';
+import './Shop.css';
 
 export default function Shop({ liked, onToggleLike, onAddToCart }) {
   const [sortBy, setSortBy] = useState('price-desc');

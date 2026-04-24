@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './ProductCard.css';
 
 export default function ProductCard({ product, liked, onToggleLike, onAddToCart }) {
   return (
@@ -26,17 +27,7 @@ export default function ProductCard({ product, liked, onToggleLike, onAddToCart 
             <p className="product-name">{product.name}</p>
             <p className="product-price">₴{product.price.toLocaleString()}</p>
           </div>
-          <button
-            className="add-to-cart"
-            type="button"
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              onAddToCart?.(product);
-            }}
-          >
-            Додати в кошик
-          </button>
+          
         </div>
       </div>
     </Link>

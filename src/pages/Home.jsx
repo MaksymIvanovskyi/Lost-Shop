@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import ProductCard from '../components/ProductCard.jsx';
 import { products } from '../utils/products.js';
 import heroImage from '../assets/shoesimage.png';
+import './Home.css';
 
 export default function Home({ liked, onToggleLike, onAddToCart }) {
   return (
@@ -10,8 +11,8 @@ export default function Home({ liked, onToggleLike, onAddToCart }) {
         <img src={heroImage} alt="New Collection" className="hero-img" />
         <div className="hero-overlay">
           <p className="hero-label">НОВА КОЛЕКЦІЯ</p>
-          <h1 className="hero-title">FALL / WINTER<br />2026</h1>
-          <Link to="/shop" className="hero-btn">Купити Зараз</Link>
+          
+          <Link to="/shop" className="hero-btn" style={{ textDecoration: 'none' }}>Купити Зараз</Link>
         </div>
       </section>
 
