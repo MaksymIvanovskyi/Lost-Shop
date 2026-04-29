@@ -9,10 +9,12 @@ export default function Home({ liked, onToggleLike, onAddToCart }) {
     <section className="home-page">
       <section className="hero">
         <img src={heroImage} alt="New Collection" className="hero-img" />
+
         <div className="hero-overlay">
-          <p className="hero-label">НОВА КОЛЕКЦІЯ</p>
-          
-          <Link to="/shop" className="hero-btn" style={{ textDecoration: 'none' }}>Купити Зараз</Link>
+          <div className="hero-content">
+            <p className="hero-label">НОВА КОЛЕКЦІЯ</p>
+            <Link to="/shop" className="hero-btn">Купити Зараз</Link>
+          </div>
         </div>
       </section>
 

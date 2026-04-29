@@ -65,20 +65,32 @@
 .like-btn:hover { transform: scale(1.1); }
 .like-btn.liked { color: #e85d5d; }
 
-.product-card .product-info {
-  padding: 14px 16px;
+.product-card {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  min-height: 64px;
+  justify-content: center;
+  background-color: #7917d4;
+  
+  
+}
+.product-info-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  
+
+ 
 }
 
-.product-title-row {
+.product-title-row-card {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 14px;
+  gap: 4rem;
+  background-color: aqua;
 }
 
 .product-name {
@@ -92,7 +104,7 @@
   text-overflow: ellipsis;
 }
 
-.product-price {
+.product-price-card {
   font-size: 16px;
   font-weight: 700;
   color: var(--black);

@@ -9,32 +9,39 @@
   background: var(--white);
   border-bottom: 1px solid var(--light-gray);
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0 32px;
   transition: box-shadow 0.3s;
+
 }
 
 .top-bar.scrolled { box-shadow: 0 1px 8px rgba(148, 91, 91, 0.08); }
 
 .top-bar-left {
-  flex: 0 0 auto;
-  width: 200px;
+  width: 10%;
+  min-width: 90px;
+  margin-left: -25px;
+  margin-right: 25px;
+  flex-shrink: 1; 
 }
 
 .top-bar-center {
-  flex: 1;
   text-align: center;
+  max-height: 20px;
+  width: 50%;
+  min-width: 250px;
+  
+}
+.top-bar-right {
+  width: 10%;
 }
 
-.top-bar-right {
-  flex: 0 0 auto;
-  width: 200px;
-}
+
 
 .top-bar-tagline {
   font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 4px;
   color: var(--black);
@@ -56,6 +63,7 @@
   text-transform: uppercase;
   padding: 4px 8px;
   transition: opacity 0.2s;
+  
 }
 
 .top-bar-btn:hover { opacity: 0.6; }
@@ -82,7 +90,7 @@
   display: flex;
   align-items: center;
   gap: 32px;
-  flex: 1;
+  flex: 1; /*Вона встановлює значення flex-grow: 1, flex-shrink: 1 та flex-basis: 0, що дозволяє елементам рівномірно ділити простір */
 }
 
 .nav-right { justify-content: flex-end; }
@@ -96,6 +104,12 @@
   text-decoration: none;
   transition: color 0.2s;
   position: relative;
+}
+
+@media (max-width: 780px) {
+  #nav-link2 {
+    display: none;
+  }
 }
 
 .nav-link::after {
@@ -118,13 +132,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 3rem;
+  -webkit-tap-highlight-color: transparent;
 }
 
+
+
 .logo-image {
-  height: 100px;
+  height: clamp(4.8rem, 5vw, 6rem);
   width: auto;
   display: block;
+  
 }
+
+
 
 .nav-right {
   display: flex;

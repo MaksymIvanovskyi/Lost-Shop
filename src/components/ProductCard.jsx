@@ -22,10 +22,10 @@ export default function ProductCard({ product, liked, onToggleLike, onAddToCart 
             </svg>
           </button>
         </div>
-        <div className="product-info">
-          <div className="product-title-row">
+        <div className="product-info-card">
+          <div className="product-title-row-card">
             <p className="product-name">{product.name}</p>
-            <p className="product-price">₴{product.price.toLocaleString()}</p>
+            <p className="product-price-card">₴{product.price.toLocaleString()}</p>
           </div>
           
         </div>

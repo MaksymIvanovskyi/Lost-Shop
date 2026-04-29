@@ -89,7 +89,7 @@ export default function ProductDetails({ onToggleLike, onAddToCart, liked }) {
           </div>
 
           <div className="product-sizes">
-            <h3>Розмір</h3>
+            <h3 className='product-sizes-text'>Розмір</h3>
             <div className="size-options">
               {availableSizes.map((size) => (
                 <button

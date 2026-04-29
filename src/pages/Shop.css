@@ -1,25 +1,27 @@
 .store-page {
-  padding: 50px 0;
+  padding: 0;
   background: var(--off-white);
 }
 
 .store-heading {
-  max-width: 1200px;
-  margin: 0 auto 48px;
-  text-align: left;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+.hero-title {
+  margin-top: 1rem;
+  color: black;
+  font-size: clamp(2rem, 3vw, 4rem);
 }
 
-.store-description {
-  max-width: 700px;
-  margin-top: 18px;
-  color: var(--gray);
-  line-height: 1.7;
-  font-size: 15px;
-}
+
 
 .store-body {
   max-width: 98%;
-  margin: 0 auto;
+  margin: auto ;
   position: relative;
   overflow: hidden;
   padding-top: 60px;
@@ -38,11 +40,21 @@
   transform: translateX(-100%);
   opacity: 0;
   transition: transform 0.4s ease, opacity 0.4s ease;
+  background-color: rgba(20, 20, 20, 0.329);
 }
+@media (max-width: 768px) {
+  .store-filters {
+    width: 100%;
+    transform: translateX(100%);
+    
+  }
 
+}
 .store-filters.visible {
   transform: translateX(0);
   opacity: 1;
+  
+  
 }
 
 .store-grid {
@@ -57,30 +69,66 @@
   gap: 24px;
 }
 
+@media (max-width: 768px) {
+  .store-grid {
+    display: grid;                /* або залишити grid, якщо він уже заданий */
+    grid-template-columns: repeat(2, 1fr);  /* 2 рівні колонки */
+    gap: 16px;                   /* проміжок між картками */
+  }
+}
+/* for mobile */
+@media (max-width: 480px) {
+  .store-grid {
+    grid-template-columns: 1fr;  /* одна картка в ряд */
+  }
+}
+
+
+
 .store-body.has-filters .store-grid {
   width: calc(100% - 320px);
   transform: translateX(320px);
   margin-top: 0;
 }
+@media (max-width: 768px) {
+  .store-body.has-filters .store-grid {
+    width: calc(100% - 1px);
+    transform: translateX(1px);
+    margin-top: 400px;
+  }
 
+}
 .filter-toggle-main-button {
   background: transparent;
   color: var(--black);
   border: none;
-  padding: 12px 24px;
+  padding: 13px 24px;
   border-radius: 0;
-  font-size: 14px;
+  font-size: 74%;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
   position: absolute;
-  top: 0;
-  left: 1%;
+  top: 1%;
+  left: 2%;
   z-index: 20;
   margin: -12px -24px;
   background-clip: padding-box;
+  
 }
+
+@media (max-width: 768px) {
+  .filter-toggle-main-button {
+    margin: 1px 9px;
+    top: 1px;
+    right: 1%;
+    left: 60%;
+    
+  
+  }
+}
+
 
 .store-filters h3 {
   margin: 0 0 24px;

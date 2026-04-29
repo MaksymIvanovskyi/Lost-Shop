@@ -1,19 +1,37 @@
 .product-page {
-  padding: 96px clamp(32px, 5vw, 80px);
+  /* padding: clamp(32px, 5vw, 80px) 1; */
   background: var(--off-white);
+  background-color: #a9ffae;
+  min-height: calc(100vh - 104px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }
 
 .product-details-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  max-width: 1400px;
-  margin: 0 auto;
-  align-items: start;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: calc(clamp(10px, 1.5vw, 24px) * 1);
+  width: 100%;
+  max-width: none;
+  align-items: center;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  background-color: #28c63d;
+  padding-top: 2vh;
+  padding-bottom: 1vh;
+  
 }
 
 .product-images {
   position: relative;
+  background-color: #cc2ab6;
+  flex: 1 1 45%;
+  min-width: 320px;
+  max-width: 600px;
 }
 
 .image-carousel {
@@ -21,13 +39,12 @@
   border-radius: 24px;
   overflow: hidden;
   background: var(--white);
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.06); 
 }
 
 .product-main-image {
   width: 100%;
-  height: 600px;
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 
@@ -90,8 +107,14 @@
 .product-info {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  width: 100%;
+  flex:1 1 40%;
+  min-width: 320px;
+  max-width: 560px;
+  background-color: #132da1;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 1rem;
+ 
 }
 
 .product-title-row {
@@ -146,13 +169,20 @@
 
 .product-sizes {
   margin: 16px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  justify-content: space-evenly;
+  background-color: #cc2ab6;
+  
 }
 
-.product-sizes h3 {
-  font-size: 18px;
+.product-sizes-text {
+  font-size: 1.4rem;
   font-weight: 600;
-  color: var(--black);
-  margin: 0 0 12px 0;
+  color: rgb(241, 241, 241);
+  margin: 12px 12px 12px 12px;
+  background-color: #132da1;
 }
 
 .size-options {
@@ -300,12 +330,13 @@
 
 .back-to-shop-btn {
   display: inline-block;
-  margin-top: 24px;
   color: var(--gray);
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
   transition: color 0.2s;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .back-to-shop-btn:hover {

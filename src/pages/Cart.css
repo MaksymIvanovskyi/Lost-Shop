@@ -1,12 +1,21 @@
 .cart-page {
-  padding: 96px clamp(32px, 5vw, 80px);
+  padding: 6px clamp(32px, 5vw, 80px);
   background: var(--off-white);
+  min-height: calc(100vh - 104px);
 }
 
 .cart-heading {
   max-width: 1200px;
   margin: 0 auto 48px;
-  text-align: left;
+  height: 5rem;
+  line-height: 5rem;
+  width: 14rem;
+}
+
+.hero-title-cart {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  color: #422b0d;
 }
 
 .cart-empty {
@@ -17,7 +26,6 @@
   gap: 20px;
   align-items: center;
   justify-content: center;
-  min-height: 400px; 
 }
 
 .cart-btn {
@@ -76,10 +84,11 @@
 .drawer-remove {
   background: none;
   border: none;
+  width: 2.3rem;
+  height: 2.3rem;
   font-size: 24px;
   color: var(--gray);
   cursor: pointer;
-  padding: 8px;
   border-radius: 50%;
   transition: all 0.2s;
 }

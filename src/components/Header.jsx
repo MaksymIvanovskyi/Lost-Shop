@@ -26,8 +26,8 @@ export default function Header({ cartCount, likedCount, scrolled }) {
       <nav className={`main-nav ${scrolled ? 'scrolled' : ''}`}>
         <div className="nav-left">
           <Link to="/shop" className="nav-link">Shop</Link>
-          <a href="#care" className="nav-link">Customer Care</a>
-          <a href="#stores" className="nav-link">Stores</a>
+          <a href="#care" className="nav-link" id="nav-link2">Customer Care</a>
+          <a href="#stores" className="nav-link" id="nav-link2">Stores</a>
         </div>
         <div className="nav-logo">
           <Link to="/">

@@ -7,7 +7,7 @@ export default function Cart({ cart, onRemoveFromCart }) {
   return (
     <section className="cart-page">
       <div className="cart-heading">
-        <h1 className="hero-title">Кошик</h1>
+        <h1 className="hero-title-cart">Кошик</h1>
       </div>
       {cart.length === 0 ? (
         <div className="cart-empty">
