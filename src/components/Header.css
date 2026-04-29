@@ -21,9 +21,9 @@
 .top-bar-left {
   width: 10%;
   min-width: 90px;
-  margin-left: -25px;
-  margin-right: 25px;
-  flex-shrink: 1; 
+  margin-left: 1rem;
+  margin-right: 1rem;
+  flex-shrink: 1;
 }
 
 .top-bar-center {

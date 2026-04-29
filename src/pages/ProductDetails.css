@@ -1,7 +1,6 @@
 .product-page {
   /* padding: clamp(32px, 5vw, 80px) 1; */
   background: var(--off-white);
-  background-color: #a9ffae;
   min-height: calc(100vh - 104px);
   display: flex;
   flex-direction: column;
@@ -20,15 +19,18 @@
   align-items: center;
   justify-content: space-evenly;
   box-sizing: border-box;
-  background-color: #28c63d;
   padding-top: 2vh;
   padding-bottom: 1vh;
   
 }
+@media (max-width: 768px) {
+  .product-details-layout {
+    padding-top: 0vh;
+  }
+}
 
 .product-images {
   position: relative;
-  background-color: #cc2ab6;
   flex: 1 1 45%;
   min-width: 320px;
   max-width: 600px;
@@ -36,7 +38,7 @@
 
 .image-carousel {
   position: relative;
-  border-radius: 24px;
+  
   overflow: hidden;
   background: var(--white);
   box-shadow: 0 24px 50px rgba(0, 0, 0, 0.06); 
@@ -110,7 +112,6 @@
   flex:1 1 40%;
   min-width: 320px;
   max-width: 560px;
-  background-color: #132da1;
   justify-content: center;
   box-sizing: border-box;
   padding: 0 1rem;
@@ -173,16 +174,15 @@
   flex-direction: row;
   flex-wrap: wrap; 
   justify-content: space-evenly;
-  background-color: #cc2ab6;
   
 }
 
 .product-sizes-text {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
-  color: rgb(241, 241, 241);
+  color: rgb(0, 0, 0);
   margin: 12px 12px 12px 12px;
-  background-color: #132da1;
 }
 
 .size-options {
@@ -304,29 +304,9 @@
   cursor: not-allowed;
 }
 
-.like-btn {
-  width: 56px;
-  height: 56px;
-  border: 2px solid var(--light-gray);
-  background: var(--white);
-  border-radius: 8px;
-  font-size: 24px;
-  cursor: pointer;
-  transition: all 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.like-btn:hover {
-  border-color: var(--gray);
-}
 
-.like-btn.liked {
-  border-color: #e91e63;
-  background: #fce4ec;
-  color: #e91e63;
-}
+
 
 .back-to-shop-btn {
   display: inline-block;
@@ -335,8 +315,8 @@
   font-size: 16px;
   font-weight: 500;
   transition: color 0.2s;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .back-to-shop-btn:hover {
